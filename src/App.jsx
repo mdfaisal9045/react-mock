@@ -39,13 +39,27 @@
 // export default App
 
 
+// import React from 'react'
+// import GrandParent from './task3/GrandParent'
+
+// const App = () => {
+//   return (
+//     <>
+//     <GrandParent/>
+//     </>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import GrandParent from './task3/GrandParent'
+import Profileinfo from './profile/Profileinfo'
 
 const App = () => {
   return (
     <>
-    <GrandParent/>
+      <Profileinfo/>
     </>
   )
 }
