@@ -53,14 +53,53 @@
 // export default App
 
 
+// import React from 'react'
+// import Profileinfo from './profile/Profileinfo'
+
+// const App = () => {
+//   return (
+//     <>
+//       <Profileinfo/>
+//     </>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import MyProfile from './task3_jsx+state+module/MyProfile'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <MyProfile/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React from 'react'
+// import ToggleBulb from './task4_toggle/ToggleBulb'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <ToggleBulb/>
+//     </div>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-import Profileinfo from './profile/Profileinfo'
+import CounterContext from './task5_contextApi/CounterContext'
 
 const App = () => {
   return (
-    <>
-      <Profileinfo/>
-    </>
+    <div>
+      <CounterContext/>
+    </div>
   )
 }
 

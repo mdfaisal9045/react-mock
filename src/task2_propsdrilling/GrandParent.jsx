@@ -1,6 +1,7 @@
 //! Task 3: props-drilling on -before sunday
 //!EXECUTE IT IN "react-mock"
 //* I will consider this task for mock
+
 //? Send the data GrandParent.jsx --> Parent.jsx --> Child.jsx --->GrandChild.jsx
 //In GrandParent.jsx declare following variable with data
 // institute---> "Qspiders"  , course --> {frontend:"Reactjs", backend:"Nodejs"} , trainers = ["xyz","abc"]
