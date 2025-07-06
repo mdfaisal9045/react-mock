@@ -4,24 +4,55 @@
 //* apply same colors for alternative rows..
 
 import axios from "axios";
-import React, { useEffect } from "react";
-
+import React, { Fragment, useEffect, useState } from "react";
 
 const AxiosLibrary = () => {
+  let [user, setUser] = useState([]);
 
-    let api = "https://api.github.com/users";
+  let api = "https://api.github.com/users";
 
   let taskSeven = async () => {
-    try { let res=await axios.get(api)
-        console.log(res)
-    } catch (error) {console.log(error);
-    }
+    let { data } = await axios.get(api);
+    setUser(data);
   };
+  console.log("user:", user);
 
   useEffect(() => {
-    taskSeven();
-  },[]);
-  return <div>AxiosLibrary</div>;
+    try {
+      taskSeven();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  return (
+    <>
+    <table border="1" cellPadding="10" cellSpacing="0">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>login</th>
+          <th>image</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {user.map((val,index)=>{
+          console.log("curreny val: ",val)
+          return(
+            <Fragment key={val.id}>
+              <tr style={{backgroundColor:index%2===0?"red":"yellow"}}>
+                <td>{val.id}</td>
+                <td>{val.login}</td>
+                <td><img src={val.avatar_url} alt="" height="50px" width="50px"/></td>
+              </tr>
+            </Fragment>
+          )
+        })}
+      </tbody>
+    </table>
+    </>
+  )
 };
 
 export default AxiosLibrary;
