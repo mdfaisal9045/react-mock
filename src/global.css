@@ -1,0 +1,17 @@
+.active{
+    color: rgb(177, 205, 50);
+}
+
+.home{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home h1{
+    color: darkblue;
+}
+
+.home img{
+    width: 500px;
+    height: 400px;
+}
